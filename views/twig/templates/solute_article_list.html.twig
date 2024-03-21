@@ -1,0 +1,47 @@
+{% set shopUrl = oViewConf.getShopUrl() %}
+
+<!doctype html>
+<html lang="de">
+    <head>
+        <style>
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxCore.css') }}');
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxArticleList.css') }}');
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxMapping.css') }}');
+        </style>
+    </head>
+
+    <body>
+        <dialog id="modalWindow">
+            <div>
+                <input id="translationSubmitButtonLabel" type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_SUBMIT" }) }}" />
+                <a onclick="closeModal();" title="{{ translate({ ident: "UMSOLUTE_MODAL_CLOSE" }) }}" class="close">X</a>
+                <div id="modalContent"></div>
+            </div>
+        </dialog>
+
+        <div id="bodyDiv"></div>
+
+        <div id="content">
+            <h1>{{ translate({ ident: "UMSOLUTE_TITLE_ARTICLE_LIST" }) }}</h1>
+            <input id="shopUrl"                         type="hidden" value="{{ shopUrl }}" />
+            <input id="shopId"                          type="hidden" value="{{ oView.getShopId() }}" />
+            <input id="translationButtonTitleValidate"  type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_VALIDATE" }) }}" />
+            <input id="translationButtonTitleCheck"     type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_CHECK" }) }}" />
+            <input id="translationButtonTitleDelete"    type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_DELETE" }) }}" />
+            <input id="translationButtonTitleInfo"      type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_INFO" }) }}" />
+            <input id="translationButtonTitleUpload"    type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_UPLOAD" }) }}" />
+            <input id="translationButtonTitleSuccess"   type="hidden" value="{{ translate({ ident: "UMSOLUTE_BUTTON_TITLE_SUCCESS" }) }}" />
+            <div id="CheckboxControl" class="checkboxControlContainer" style="display:none;">
+                <div id="buttonValidateAll" class="btnValidateAll" onclick="validateMultipleArticle();">{{ translate({ ident: "UMSOLUTE_BUTTON_VALIDATEALL" }) }}</div>
+                <div id="buttonValidateAll" class="btnValidateAll" onclick="checkMultipleArticleOnApi();">{{ translate({ ident: "UMSOLUTE_BUTTON_CHECKALL" }) }}</div>
+                <div id="buttonValidateAll" class="btnValidateAll" onclick="sendMultipleArticleToApi();">{{ translate({ ident: "UMSOLUTE_BUTTON_SENDTOAPIALL" }) }}</div>
+                <div id="buttonValidateAll" class="btnValidateAll" onclick="deleteMultipleArticleOnApi();">{{ translate({ ident: "UMSOLUTE_BUTTON_DELETEALL" }) }}</div>
+            </div>
+
+            <div id="ArticleList" style="display: none;"></div>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxBaseMapping.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxArticleList.js') }}"></script>

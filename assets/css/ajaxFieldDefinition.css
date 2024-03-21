@@ -1,0 +1,70 @@
+input, select, .input-label {
+    font-family: "Open Sans", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(52, 73, 94);
+}
+
+input {
+    padding: 4px 4px 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    min-width: 390px;
+}
+
+select {
+    max-width: 330px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    min-width: 400px;
+}
+.list-row {
+    display: grid;
+    grid-template-columns: 3% 3% 30% 30% auto;
+}
+
+.form-header {
+    font-family: "Open Sans", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(52, 73, 94);
+    padding-bottom: 4px;
+    border-bottom: 2px solid #cccccc;
+    margin: 16px 0;
+}
+.header {
+    margin-left: 24px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 8px 24px;
+}
+
+.table-div {
+    margin: 24px 0;
+    padding: 16px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-footer {
+    padding-top: 16px;
+    border-top: 2px solid #cccccc;
+    margin: 16px 0;
+}
+
+.footer-button {
+    margin-left: 20px;
+}
+
+.save-button {
+    width: 120px;
+    min-width: unset;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #999999;
+}

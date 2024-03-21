@@ -1,0 +1,9 @@
+services:
+
+  _defaults:
+    public: false
+    autowire: true
+
+  UnitM\Solute\Service\ModuleSettingsInterface:
+    class: UnitM\Solute\Service\ModuleSettings
+    public: true

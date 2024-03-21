@@ -1,0 +1,69 @@
+body {
+    font-family: "Open Sans", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(52, 73, 94);
+    margin: 8px;
+    padding-bottom: 24px;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 240px 350px 220px auto 16px;
+    margin: 4px 0 12px 0;
+}
+
+.dropdown {
+    max-width: 330px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+}
+
+.input {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+}
+
+.attributeGroup {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 24px 0 8px 0;
+    padding: 0 0 4px 0;
+}
+
+.headline {
+    margin: 0 0 4px 0;
+    border-bottom: 1px solid #999999;
+}
+
+.identifier {
+    font-size: 14px;
+    padding: 4px;
+}
+
+.submit {
+    margin: 4px 0;
+    padding: 8px 0;
+    border-top: 1px solid ;
+}
+
+.result {
+    border: 2px solid #999999;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.success {
+    border-color: green;
+    color: green;
+}
+
+.error {
+    border-color: red;
+    color: red;
+}
+
+.required {
+    font-weight: bold;
+}

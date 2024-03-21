@@ -1,0 +1,35 @@
+{% set shopUrl = oViewConf.getShopUrl() %}
+
+<!doctype html>
+<html lang="de">
+    <head>
+        <style>
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxCore.css') }}');
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxMapping.css') }}');
+        </style>
+    </head>
+
+    <body>
+        <h1>{{ translate({ ident: "UMSOLUTE_TITLE_SHOP_MAPPING" }) }}</h1>
+        <form method="post" action="{{ oViewConf.getSelfLink()|raw }}">
+            {{ oViewConf.getHiddenSid()|raw }}
+            <input type="hidden" name="soluteShopUrl"       id="shopUrl"    value="{{ shopUrl }}" />
+            <input type="hidden" name="soluteModulShopId"   id="shopId"     value="{{ oView.getShopId() }}" />
+            <input type="hidden" name="saveMapping"                         value="1" />
+            <input type="hidden" name="cl"                                  value="ShopMappingController" />
+            <input type="hidden" name="fc"                                  value="" />
+
+            {% set result = oView.getResultMessage() %}
+            {% if result %}
+                <div class="result {% if result.result %}success {% else %} error {% endif %}">{{ result.message }}</div>
+            {% endif %}
+
+            <div id="Mapping" style="display: none;"></div>
+
+            <div class="submit"><input type="submit" value="{{ translate({ ident: "UMSOLUTE_BUTTON_SUBMIT" }) }}"/></div>
+        </form>
+    </body>
+
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxBaseMapping.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxShopMapping.js') }}"></script>

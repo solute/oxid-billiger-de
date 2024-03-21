@@ -1,0 +1,45 @@
+{% include "headitem.html.twig" with {title: "GENERAL_ADMIN_TITLE"|translate} %}
+{% set shopUrl = oViewConf.getShopUrl() %}
+
+<!doctype html>
+<html lang="de">
+    <head>
+        <style>
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxCore.css') }}');
+            @import url('{{ oViewConf.getModuleUrl('oxid_solute','css/ajaxMapping.css') }}');
+        </style>
+    </head>
+
+    <body>
+        <form name="transfer" id="transfer" action="{{ oViewConf.getSelfLink()|raw }}" method="post">
+            {{ oViewConf.getHiddenSid()|raw }}
+            <input type="hidden" name="oxid" value="{{ oxid }}">
+            <input type="hidden" name="cl" value="category_extend">
+            <input type="hidden" name="editlanguage" value="{{ editlanguage }}">
+        </form>
+
+        <h1>{{ translate({ ident: "UMSOLUTE_TITLE_CATEGORY_MAPPING" }) }}</h1>
+        <form method="post" action="{{ oViewConf.getSelfLink()|raw }}">
+            {{ oViewConf.getHiddenSid()|raw }}
+            <input type="hidden" name="soluteShopUrl"       id="shopUrl"    value="{{ shopUrl }}" />
+            <input type="hidden" name="soluteModulShopId"   id="shopId"     value="{{ oView.getShopId() }}" />
+            <input type="hidden" name="soluteCategoryId"    id="categoryId" value="{{ oView.getSoluteCategoryId() }}" />
+            <input type="hidden" name="oxid"                                value="{{ oView.getSoluteCategoryId() }}" />
+            <input type="hidden" name="saveMapping"                         value="1" />
+            <input type="hidden" name="cl"                                  value="CategoryMappingController" />
+            <input type="hidden" name="fc"                                  value="" />
+
+            {% set result = oView.getResultMessage() %}
+            {% if result %}
+                <div class="result {% if result.result %}success {% else %} error {% endif %}">{{ result.message }}</div>
+            {% endif %}
+
+            <div id="Mapping" style="display: none;"></div>
+
+            <div class="submit"><input type="submit" value="{{ translate({ ident: "UMSOLUTE_BUTTON_SUBMIT" }) }}"/></div>
+        </form>
+    </body>
+
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxBaseMapping.js') }}"></script>
+    <script type="text/javascript" src="{{ oViewConf.getModuleUrl('oxid_solute','js/ajaxCategoryMapping.js') }}"></script>
