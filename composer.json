@@ -1,0 +1,30 @@
+{
+  "name": "unitm/oxid_solute",
+  "description": "Solute Data conversion",
+  "version": "1.0.0",
+  "type": "oxideshop-module",
+  "homepage": "https://www.unit-m.de",
+  "license": [
+    "proprietary"
+  ],
+  "extra": {
+    "oxideshop": {
+      "target-directory": "unitm/oxid_solute"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+
+    "ext-json": "*",
+    "ext-mbstring":"*",
+    "ext-curl": "*",
+    "ext-ctype": "*",
+
+    "oxid-esales/oxideshop-ce": "^v6.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "UnitM\\Solute\\": "../../../source/modules/unitm/oxid_solute/src"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="umsolute_mxmain">
+            <SUBMENU id="umsolute_mxarticle" cl="ValidatorController" />
+            <SUBMENU id="umsolute_mxmapping" cl="ShopMappingController" />
+            <SUBMENU id="umsolute_mxfielddefinition" cl="FieldDefinitionController" />
+        </MAINMENU>
+        <MAINMENU id="mxmanageprod">
+            <SUBMENU id="mxarticles" cl="article" list="article_list">
+                <TAB id="tbclarticle_solute" cl="ArticleMappingController" />
+            </SUBMENU>
+            <SUBMENU id="mxcategories" cl="category" list="category_list">
+                <TAB id="tbclcategory_solute" cl="CategoryMappingController" />
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

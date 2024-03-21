@@ -1,0 +1,178 @@
+.listValidateButton {
+    font-weight: 400;
+    padding: 4px 8px;
+    margin: 1px;
+    background-color: white;
+    color: #999;
+    text-align: center;
+    border: rgb(221, 221, 221) solid 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.infoItem {
+    border: red solid 2px;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.listValidateButtonValid {
+    border: green solid 2px;
+}
+
+.listValidateButtonError {
+    border: red solid 2px;
+}
+
+.listItem {
+    font-weight: 400;
+    padding: 4px 8px;
+    background-color: #eee;
+    border: 1px solid white;
+}
+
+.infoFieldActive {
+    border: mediumblue solid 2px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 12px;
+    color: mediumblue;
+    text-align: center;
+    padding: 4px 8px;
+    margin: 1px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.infoFieldError {
+    border: red solid 2px;
+}
+
+.infoFieldValid {
+    border: green solid 2px;
+    cursor: default;
+}
+
+.pagingButton {
+    font-weight: 400;
+    padding: 4px 8px;
+    margin: 1px;
+    background-color: white;
+    color: #999;
+    text-align: center;
+    border: rgb(221, 221, 221) solid 1px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.listBody {
+    display: grid;
+    grid-template-columns: 2% 3% 3% 3% 3% 10% 10% 25% auto;
+}
+
+.listHeader {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-wrap: none;
+    border: rgb(221, 221, 221) solid 1px;
+    padding: 4px 8px;
+    margin-bottom: 1px;
+}
+
+.listFooter {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.listFooterText {
+    margin: 6px 12px 0 12px;
+}
+
+.infoLine {
+    display: none;
+    grid-template-columns: 11% auto;
+}
+
+.checkboxControlContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.btnValidateAll {
+    font-weight: 400;
+    padding: 4px 8px;
+    margin: 1px;
+    background-color: white;
+    color: #999;
+    text-align: center;
+    border: rgb(221, 221, 221) solid 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.soluteCheckBox {
+    margin: 8px 0 0 8px;
+}
+
+.icon-pencil {
+    height: 10px;
+    margin-right: 8px;
+}
+
+.icon-button {
+    height: 12px;
+}
+
+dialog {
+    width: 90%;
+    margin: 24px;
+    border: solid 1px #999999;
+    border-radius: 10px;
+    background: #ffffff;
+    z-index: 99999;
+}
+
+.modalBackground {
+    position: Fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #333333 !important;
+    z-index: 99998;
+    opacity: 0.8;
+    pointer-events: None;
+}
+
+.content-inactive {
+    position: relative;
+    z-index: -1;
+    filter: grayscale(1);
+}
+
+.close {
+    background-color: white;
+    color: red;
+    line-height: 25px;
+    position: Absolute;
+    right: -12px;
+    text-align: Center;
+    top: -10px;
+    width: 24px;
+    text-decoration: None;
+    font-weight: Bold;
+    border: 2px solid red;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: red;
+    color: white;
+}
+.pointer {
+    cursor: pointer;
+}
